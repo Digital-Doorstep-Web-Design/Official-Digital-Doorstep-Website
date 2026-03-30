@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d47f0be-6e14-4ada-9672-b95d345ea13e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/../../next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../tailwind.config.ts" afterDir="false" />
+    <list default="true" id="8d47f0be-6e14-4ada-9672-b95d345ea13e" name="Changes" comment="Add form attributes to ContactSection for improved accessibility and Netlify integration">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,27 +15,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;johnnyhep&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Digital-Doorstep-Web-Design/Official-Digital-Doorstep-Website.git&quot;,
+    &quot;accountId&quot;: &quot;65f8a3f1-ecea-4eed-83d2-bf328bc24c05&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3BU5cKcr8TAkJdzNIXQgDWEwxEd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -56,10 +67,25 @@
       <option name="presentableId" value="Default" />
       <updated>1774530887935</updated>
       <workItem from="1774530890114" duration="5000" />
+      <workItem from="1774913025814" duration="343000" />
+      <workItem from="1774913805020" duration="88000" />
     </task>
+    <task id="LOCAL-00001" summary="Add form attributes to ContactSection for improved accessibility and Netlify integration">
+      <option name="closed" value="true" />
+      <created>1774913353036</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774913353036</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add form attributes to ContactSection for improved accessibility and Netlify integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add form attributes to ContactSection for improved accessibility and Netlify integration" />
   </component>
 </project>

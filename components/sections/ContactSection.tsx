@@ -36,16 +36,11 @@ export default function ContactSection() {
     setSubmit(true);
     setError("");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ "form-name": "website_form", ...form }).toString(),
       });
-      if (res.status === 429) {
-        const data = await res.json();
-        setError(data.error ?? "Too many requests. Please try again later.");
-        return;
-      }
       if (!res.ok) {
         setError("Something went wrong. Please try again or email us directly.");
         return;
@@ -145,7 +140,10 @@ export default function ContactSection() {
                 aria-label="Contact form"
                 className="bg-white rounded-card p-8 md:p-10 shadow-card space-y-5"
                 data-netlify="true"
+                data-netlify-honeypot="website"
               >
+                <input type="hidden" name="form-name" value="website_form" />
+
                 {/* Honeypot — visually hidden, never filled by real users */}
                 <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }}>
                   <label htmlFor="website">Website</label>
