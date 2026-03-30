@@ -3,20 +3,19 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 
-const STARTER_FEATURES = [
-  "Missed-call reply \u2014 every unanswered call gets a personal text back within 60 seconds",
-  "Appointment confirmation and reminder \u2014 sent automatically the day before and the morning of",
-  "Post-job review request \u2014 we ask your happy customers for a Google review so you don\u2019t have to",
-  "New contact logging \u2014 every new customer is saved automatically, nothing gets lost",
-  "Monthly monitoring \u2014 we watch it so you don\u2019t have to, and fix anything before you notice",
+const ESSENTIALS_FEATURES = [
+  "Single-system build \u2014 we identify your biggest leak and engineer the fix around it",
+  "Done-for-you setup \u2014 we handle every detail, you don\u2019t touch a thing",
+  "Tested before it goes live \u2014 nothing runs until we\u2019ve confirmed it works end-to-end",
+  "Monthly maintenance \u2014 we watch it, update it, and fix anything before you notice",
 ];
 
-const PRO_FEATURES = [
-  "Win-back messages \u2014 customers who haven\u2019t been back in 30, 60, or 90 days get a personal outreach automatically",
-  "Customer loyalty flows \u2014 post-purchase follow-ups that keep people coming back without any effort from you",
-  "Review building \u2014 a consistent, automated ask after every purchase that grows your Google rating over time",
-  "Low-stock alerts \u2014 get notified automatically before you run out of what\u2019s selling",
-  "Monthly check-in and report \u2014 a plain-English summary of what ran, what worked, and what\u2019s next",
+const COMPLETE_FEATURES = [
+  "Full operations audit \u2014 we map how your business runs before we build anything",
+  "Multi-system build \u2014 multiple automations built to work together as one",
+  "Cross-platform integration \u2014 your tools connected and talking to each other",
+  "Done-for-you setup and testing \u2014 everything verified before it touches a real customer",
+  "Monthly maintenance and reporting \u2014 plain-English summary of what ran, what worked, and what\u2019s next",
 ];
 
 export default function ServicesSection() {
@@ -66,13 +65,12 @@ export default function ServicesSection() {
           whileInView="visible"
           viewport={viewport}
         >
-          {/* Card 1 — Trades */}
+          {/* Card 1 — Essentials */}
           <motion.div
             variants={fadeUp}
             className="bg-white rounded-[24px] p-10 flex flex-col shadow-card"
             style={{ borderLeft: "4px solid #24285b" }}
           >
-            {/* Badge */}
             <span
               className="self-start text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-pill mb-6"
               style={{ background: "#0d7a2a", color: "white" }}
@@ -80,22 +78,22 @@ export default function ServicesSection() {
               Most Popular
             </span>
 
-            <h3 className="text-2xl font-bold text-ink-heading mb-1">Doorstep Starter</h3>
+            <h3 className="text-2xl font-bold text-ink-heading mb-1">Doorstep Essentials</h3>
             <p className="text-sm font-medium text-ink-muted mb-5">
               Starting at <span className="text-ink-heading font-semibold">$299 setup</span> +{" "}
               <span className="text-ink-heading font-semibold">$99/mo</span>
             </p>
 
             <p className="text-base text-ink-muted leading-relaxed mb-7">
-              Built for trades and home service businesses that are tired of
-              losing jobs to voicemail. We connect your phone, your calendar,
-              and your customers &mdash; so every lead gets a response, every
-              appointment gets a reminder, and every happy customer gets
-              asked for a review. You don&apos;t touch a thing.
+              Built for owner-operated businesses that want to fix one specific
+              problem first. We identify your single biggest leak &mdash; leads
+              falling through, reminders not going out, follow-ups never
+              happening &mdash; build the system that fixes it, and keep it
+              running every month.
             </p>
 
             <ul className="check-list mb-8 flex-grow">
-              {STARTER_FEATURES.map((f) => (
+              {ESSENTIALS_FEATURES.map((f) => (
                 <li key={f}>{f}</li>
               ))}
             </ul>
@@ -108,28 +106,28 @@ export default function ServicesSection() {
             </button>
           </motion.div>
 
-          {/* Card 2 — Retail */}
+          {/* Card 2 — Complete */}
           <motion.div
             variants={fadeUp}
             className="bg-white rounded-[24px] p-10 flex flex-col shadow-card"
             style={{ borderLeft: "4px solid #24285b" }}
           >
-            <h3 className="text-2xl font-bold text-ink-heading mb-1 mt-[52px]">Doorstep Pro</h3>
+            <h3 className="text-2xl font-bold text-ink-heading mb-1 mt-[52px]">Doorstep Complete</h3>
             <p className="text-sm font-medium text-ink-muted mb-5">
               Starting at <span className="text-ink-heading font-semibold">$699 setup</span> +{" "}
               <span className="text-ink-heading font-semibold">$199/mo</span>
             </p>
 
             <p className="text-base text-ink-muted leading-relaxed mb-7">
-              Built for retail shops and businesses that need more than a
-              website &mdash; they need their tools actually talking to each
-              other. We connect your platforms, build the follow-up flows
-              your customers never see but always feel, and keep the whole
-              system running every month.
+              Built for businesses ready to connect the dots across their entire
+              operation. We audit how your business runs, build multiple
+              automations that work together, and maintain everything monthly
+              &mdash; so the whole system runs whether you&apos;re in the office
+              or not.
             </p>
 
             <ul className="check-list mb-8 flex-grow">
-              {PRO_FEATURES.map((f) => (
+              {COMPLETE_FEATURES.map((f) => (
                 <li key={f}>{f}</li>
               ))}
             </ul>

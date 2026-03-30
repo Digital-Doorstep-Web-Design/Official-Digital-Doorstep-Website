@@ -22,39 +22,12 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={viewport}
           >
-            {/*
-              PHOTO: Place a candid, professional photo here.
-              Ideally taken outdoors or in a real environment — not a studio backdrop.
-              Recommended: slightly informal but sharp. A square or portrait crop works well.
-
-              Replace the placeholder below with:
-              <img
-                src="/founder-photo.jpg"
-                alt="[Owner name] — founder of Digital Doorstep"
-                className="w-full max-w-sm rounded-card object-cover aspect-square shadow-card"
-                style={{ border: "2px solid #24285b" }}
-              />
-            */}
-            <div
-              className="w-full max-w-sm aspect-square rounded-card flex items-center justify-center"
-              style={{
-                background: "rgba(36,40,91,0.06)",
-                border: "2px solid rgba(36,40,91,0.12)",
-              }}
-            >
-              <div className="text-center">
-                <div
-                  className="text-5xl font-bold mb-2"
-                  style={{ color: "#24285b", opacity: 0.35 }}
-                >
-                  DD
-                </div>
-                {/* REPLACE: Remove this label once real photo is added */}
-                <p className="text-xs font-medium" style={{ color: "#b1b1bc" }}>
-                  [FOUNDER PHOTO]
-                </p>
-              </div>
-            </div>
+            <img
+              src="/founder-photo.jpg"
+              alt="John Hepworth - founder of Digital Doorstep"
+              className="w-full max-w-sm rounded-card object-cover aspect-square shadow-card"
+              style={{ border: "2px solid #24285b" }}
+            />
           </motion.div>
 
           {/* ── Right: Text ── */}
@@ -71,34 +44,33 @@ export default function AboutSection() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-ink-heading leading-tight mb-8"
               variants={fadeUp}
             >
-              Local roots.
+              Built from scratch.
               <br />
-              Serious technology.
+              Priced for real businesses.
             </motion.h2>
 
             <motion.div className="space-y-5 text-base text-ink-muted leading-relaxed mb-8" variants={fadeUp}>
               <p>
-                Digital Doorstep was started in Noblesville, Indiana with
-                one idea: the same automation tools that help big businesses
-                run lean and never miss a lead should be available to the
-                HVAC contractor, the plumber, and the shop owner on your
-                street &mdash; at a price that actually makes sense.
+                My name is John, and I&apos;m the founder of Digital Doorstep.
+                I began learning to code before junior high and built my first
+                website at fourteen. In 2021, I dove into learning AI and spent
+                months studying and experimenting until I could build systems
+                that solve real problems.
               </p>
               <p>
-                Our founder built Digital Doorstep from scratch &mdash;
-                self-teaching server infrastructure, automation engineering,
-                and AI integration long before most people were talking about
-                it. We don&apos;t sell software licenses or hand you a login
-                and wish you luck. We build real systems, configured around
-                your specific business, and we stay accountable for whether
-                they actually work.
+                What I found was that most small business owners can&apos;t
+                afford automation solutions they don&apos;t understand. And if
+                they hire someone, they often get burned &mdash; paying a
+                fortune for something that doesn&apos;t work or takes forever.
+                They&apos;re stuck either way.
               </p>
               <p>
-                We&apos;re not an agency with fifty clients and an outsourced
-                team. When you work with Digital Doorstep, you work directly
-                with us. We know Noblesville, we know the businesses here,
-                and we&apos;re invested in your success &mdash; because this is our
-                community too.
+                So I built Digital Doorstep to handle automation and workflow
+                setup. Instead of huge upfront costs, we charge a setup fee and
+                monthly retainer that makes sense for a small team. You&apos;re
+                not taking a huge risk, and I&apos;m focused on delivering
+                results. That&apos;s the whole idea &mdash; straightforward,
+                honest, and built for real businesses.
               </p>
             </motion.div>
 
