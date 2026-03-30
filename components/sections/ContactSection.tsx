@@ -139,10 +139,12 @@ export default function ContactSection() {
               </div>
             ) : (
               <form
+                name="website_form"
                 onSubmit={onSubmit}
                 noValidate
                 aria-label="Contact form"
                 className="bg-white rounded-card p-8 md:p-10 shadow-card space-y-5"
+                data-netlify="true"
               >
                 {/* Honeypot — visually hidden, never filled by real users */}
                 <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }}>
