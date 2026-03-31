@@ -6,12 +6,12 @@ import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 import EmailLink from "@/components/ui/EmailLink";
 
 type FormState = {
-  name: string;
-  businessName: string;
-  businessType: string;
-  timewaster: string;
-  contact: string;
-  website: string; // honeypot — hidden from real users
+  full_name: string;
+  business_name: string;
+  business_type: string;
+  time_waster: string;
+  form_contact: string;
+  form_website: string; // honeypot — hidden from real users
 };
 
 const TRUST_SIGNALS = [
@@ -22,7 +22,7 @@ const TRUST_SIGNALS = [
 
 export default function ContactSection() {
   const [form, setForm]         = useState<FormState>({
-    name: "", businessName: "", businessType: "", timewaster: "", contact: "", website: "",
+    full_name: "", business_name: "", business_type: "", time_waster: "", form_contact: "", form_website: "",
   });
   const [submitting, setSubmit] = useState(false);
   const [done, setDone]         = useState(false);
@@ -36,10 +36,12 @@ export default function ContactSection() {
     setSubmit(true);
     setError("");
     try {
-      const res = await fetch("/", {
+      // POST to the static detector page — Netlify's CDN intercepts this
+      // before it reaches any server function and logs it as a form submission.
+      const res = await fetch("/netlify-forms-detector.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ "form-name": "website_form", ...form }).toString(),
+        body: new URLSearchParams({ "form-name": "contact_form", ...form }).toString(),
       });
       if (!res.ok) {
         setError("Something went wrong. Please try again or email us directly.");
@@ -127,41 +129,40 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-ink-heading mb-2">Message received!</h3>
-                {/* REPLACE: Update response time commitment */}
                 <p className="text-ink-muted text-sm">
                   We&apos;ll be back to you within 1 business day. Talk soon.
                 </p>
               </div>
             ) : (
               <form
-                name="website_form"
+                name="contact_form"
                 onSubmit={onSubmit}
                 noValidate
                 aria-label="Contact form"
                 className="bg-white rounded-card p-8 md:p-10 shadow-card space-y-5"
                 data-netlify="true"
-                data-netlify-honeypot="website"
+                data-netlify-honeypot="form_website"
               >
-                <input type="hidden" name="form-name" value="website_form" />
+                <input type="hidden" name="form-name" value="contact_form" />
 
                 {/* Honeypot — visually hidden, never filled by real users */}
                 <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }}>
-                  <label htmlFor="website">Website</label>
+                  <label htmlFor="form_website">Website</label>
                   <input
-                    id="website" name="website" type="text" tabIndex={-1}
-                    autoComplete="off" value={form.website}
+                    id="form_website" name="form_website" type="text" tabIndex={-1}
+                    autoComplete="off" value={form.form_website}
                     onChange={onChange}
                   />
                 </div>
 
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="full_name" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     Your name <span aria-hidden="true" className="text-red-500">*</span>
                   </label>
                   <input
-                    id="name" name="name" type="text" required autoComplete="name"
-                    value={form.name} onChange={onChange}
+                    id="full_name" name="full_name" type="text" required autoComplete="name"
+                    value={form.full_name} onChange={onChange}
                     placeholder="Jane Smith"
                     className={inputCls} style={inputStyle}
                   />
@@ -169,12 +170,12 @@ export default function ContactSection() {
 
                 {/* Business name */}
                 <div>
-                  <label htmlFor="businessName" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="business_name" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     Business name
                   </label>
                   <input
-                    id="businessName" name="businessName" type="text" autoComplete="organization"
-                    value={form.businessName} onChange={onChange}
+                    id="business_name" name="business_name" type="text" autoComplete="organization"
+                    value={form.business_name} onChange={onChange}
                     placeholder="Smith Plumbing LLC"
                     className={inputCls} style={inputStyle}
                   />
@@ -182,12 +183,12 @@ export default function ContactSection() {
 
                 {/* Business type */}
                 <div>
-                  <label htmlFor="businessType" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="business_type" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     Business type
                   </label>
                   <select
-                    id="businessType" name="businessType"
-                    value={form.businessType} onChange={onChange}
+                    id="business_type" name="business_type"
+                    value={form.business_type} onChange={onChange}
                     className={inputCls + " appearance-none"} style={inputStyle}
                   >
                     <option value="">Select your industry…</option>
@@ -203,12 +204,12 @@ export default function ContactSection() {
 
                 {/* Time-waster */}
                 <div>
-                  <label htmlFor="timewaster" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="time_waster" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     What&apos;s the most repetitive thing you or your team does every day that you wish just happened automatically?
                   </label>
                   <textarea
-                    id="timewaster" name="timewaster"
-                    rows={4} value={form.timewaster} onChange={onChange}
+                    id="time_waster" name="time_waster"
+                    rows={4} value={form.time_waster} onChange={onChange}
                     placeholder="Don't overthink it — just describe what's eating your time or costing you customers."
                     className={inputCls + " resize-none"} style={inputStyle}
                   />
@@ -216,13 +217,13 @@ export default function ContactSection() {
 
                 {/* Contact */}
                 <div>
-                  <label htmlFor="contact-method" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="form_contact" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     Best way to reach you{" "}
                     <span className="font-normal text-ink-muted">(email or phone)</span>
                   </label>
                   <input
-                    id="contact-method" name="contact" type="text" required
-                    value={form.contact} onChange={onChange}
+                    id="form_contact" name="form_contact" type="text" required
+                    value={form.form_contact} onChange={onChange}
                     placeholder="you@email.com or (317) 000-0000"
                     className={inputCls} style={inputStyle}
                   />
