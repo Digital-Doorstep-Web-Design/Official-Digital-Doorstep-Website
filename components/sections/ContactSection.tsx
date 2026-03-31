@@ -216,12 +216,12 @@ export default function ContactSection() {
 
                 {/* Contact */}
                 <div>
-                  <label htmlFor="contact" className="block text-sm font-semibold text-ink-heading mb-1.5">
+                  <label htmlFor="contact-method" className="block text-sm font-semibold text-ink-heading mb-1.5">
                     Best way to reach you{" "}
                     <span className="font-normal text-ink-muted">(email or phone)</span>
                   </label>
                   <input
-                    id="contact" name="contact" type="text" required
+                    id="contact-method" name="contact" type="text" required
                     value={form.contact} onChange={onChange}
                     placeholder="you@email.com or (317) 000-0000"
                     className={inputCls} style={inputStyle}
