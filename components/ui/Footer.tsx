@@ -41,10 +41,12 @@ export default function Footer() {
               LOGO: Use white/light version of logo here.
               Replace the img src below with /public/logo-white.svg or /public/logo-white.png.
             */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-white.svg"
               alt="Digital Doorstep"
               className="!h-16 !w-auto mb-4 opacity-90"
+              loading="lazy"
             />
             <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
               AI automation for local businesses.

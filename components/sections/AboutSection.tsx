@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 import EmailLink from "@/components/ui/EmailLink";
@@ -22,12 +23,18 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={viewport}
           >
-            <img
-              src="/founder-photo.jpg"
-              alt="John Hepworth - founder of Digital Doorstep"
-              className="w-full max-w-sm rounded-card object-cover aspect-square shadow-card"
+            <div
+              className="relative w-full max-w-sm aspect-square rounded-card overflow-hidden shadow-card"
               style={{ border: "2px solid #24285b" }}
-            />
+            >
+              <Image
+                src="/founder-photo.webp"
+                alt="John Hepworth - founder of Digital Doorstep"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 384px"
+              />
+            </div>
           </motion.div>
 
           {/* ── Right: Text ── */}

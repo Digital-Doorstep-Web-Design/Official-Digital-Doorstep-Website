@@ -58,10 +58,12 @@ export default function Navbar() {
               should read clearly on a white canvas — it will.
               For the solid (scrolled) navbar, the dark/primary version is used.
             */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.svg"
               alt="Digital Doorstep"
               className="!h-14 !w-auto"
+              fetchPriority="high"
             />
           </a>
 
@@ -74,7 +76,7 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleNav(link.href)}
-                className="text-base font-semibold text-ink-heading hover:text-brand transition-colors duration-150"
+                className="text-base font-semibold text-ink-heading hover:text-brand transition-colors duration-150 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
               >
                 {link.label}
               </button>
@@ -93,7 +95,7 @@ export default function Navbar() {
 
           {/* ── Mobile hamburger ── */}
           <button
-            className="md:hidden flex flex-col gap-[5px] p-2 -mr-2"
+            className="md:hidden flex flex-col gap-[5px] p-2 -mr-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             onClick={() => setMenu(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
