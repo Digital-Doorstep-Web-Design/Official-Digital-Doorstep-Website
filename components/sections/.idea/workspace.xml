@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d47f0be-6e14-4ada-9672-b95d345ea13e" name="Changes" comment="Add form attributes to ContactSection for improved accessibility and Netlify integration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8d47f0be-6e14-4ada-9672-b95d345ea13e" name="Changes" comment="Add form attributes to ContactSection for improved accessibility and Netlify integration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +67,7 @@
       <workItem from="1774530890114" duration="5000" />
       <workItem from="1774913025814" duration="343000" />
       <workItem from="1774913805020" duration="88000" />
+      <workItem from="1774949745226" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="Add form attributes to ContactSection for improved accessibility and Netlify integration">
       <option name="closed" value="true" />
